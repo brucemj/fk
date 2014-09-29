@@ -3,12 +3,7 @@
 <head>
     <script type="text/javascript" charset="utf-8" src="./jquery-1.7.2.min.js"></script>
 
-    <script type="text/javascript" charset="utf-8">
-        $().ready( function(){
-            $("td.data1-3").css("background-color", "#FFFFFF");
-
-        })    
-    </script>
+    <script type="text/javascript" charset="utf-8" src="./fk.js"></script>
 <style type="text/css">
     tr,td{background-color:#A7C942; width: 30px ; height: 30px; margin: 0px; padding: 0px; border: 0px }    
     table{width: 360px ; height: 600px ; margin: 0px; padding:0px; border: 0px; border-collapse:collapse }    
