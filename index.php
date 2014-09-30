@@ -22,7 +22,7 @@ tr,td{text-align:center; background-color:#A7C942; width: <?php echo $blk."px";?
         for($i=0; $i<21; $i++){
             echo '<tr class="row'. $i .'">';
             for($j=0; $j<12; $j++){
-                echo '<td class="data'. $i."-".$j .'" lock="0">';
+                echo '<td class="data'. $i."-".$j .'" lock="0" name="blk">';
                 echo '.';
                 echo '</td>';
             }

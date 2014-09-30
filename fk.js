@@ -23,15 +23,16 @@ var gameArg = [ 0 , 1 ] ;
 
 // game launch
 $(function(){
-    $("td[lock='1']").change( function(){
-        alert("aaa");
-    });
+    //$("td[lock='1']").change( function(){
+    //    alert("aaa");
+    //});
     gameArg[0] = 0;
     timedCount();
 });
 
 // timer
 function timedCount(){
+    if( gameOver() ) y=-1;
     drag( y,x,show_block,0);
     y=y+1;
     preX = 0; preY = -1;
@@ -44,7 +45,19 @@ function timedCount(){
         //clearTimeout(t);
         //return;
     }
-    t = setTimeout("timedCount()", 300 );
+    t = setTimeout("timedCount()", 200 );
 
+}
+
+function gameOver(){
+    for (i=0; i<12; i++){
+        var top = "td.data0-" + i;
+        if ( $(top).attr("lock") ){
+            y=0; cleanBlock( $( "td[name='blk']" ) );
+            $( "td[name='blk']" ).attr("lock", "0");
+            return 0;
+        }
+    }
+    return 0;
 }
 
