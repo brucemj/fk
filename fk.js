@@ -14,7 +14,7 @@ oScript2.src="eventK.js";
 oHead.appendChild( oScript2);
 */
 // define global var
-var t;
+var t, preX, preY;
 var x=4;
 var y=-1;
 var gameArg = [ 0 , 1 ] ;
@@ -23,7 +23,9 @@ var gameArg = [ 0 , 1 ] ;
 
 // game launch
 $(function(){
-    var obj = $("td.data2-4");
+    $("td[lock='1']").change( function(){
+        alert("aaa");
+    });
     gameArg[0] = 0;
     timedCount();
 });
@@ -32,6 +34,7 @@ $(function(){
 function timedCount(){
     drag( y,x,show_block,0);
     y=y+1;
+    preX = 0; preY = -1;
     drag(y,x,show_block,1);
     if( y >= 20 ){
         gameArg[0] = 0;   // random

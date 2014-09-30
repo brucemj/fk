@@ -4,11 +4,13 @@ function keyDown(event){
         case 65:    // A
             drag(y,x,show_block,0);
             x = x > 0 ? x-1 : 0;
+            preX = 1;
             drag(y,x,show_block,1);
             break;
         case 68:    // D
             drag(y,x,show_block,0);
             x = x >= 8 ? 8 : x+1;
+            preX = -1;
             drag(y,x,show_block,1);
             break;
         case 83:    // S

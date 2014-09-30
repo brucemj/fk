@@ -7,10 +7,10 @@
     <script type="text/javascript" charset="utf-8" src="./shap.js"></script>
     <script type="text/javascript" charset="utf-8" src="./eventK.js"></script>
 
-
+<?php $blk=20;?>
 <style type="text/css">
-    tr,td{text-align:center; background-color:#A7C942; width: 30px ; height: 30px; margin: 0px; padding: 0px; border: 0px }    
-    table{width: 360px ; height: 630px ; margin: 0px; padding:0px; border: 0px; border-collapse:collapse }    
+tr,td{text-align:center; background-color:#A7C942; width: <?php echo $blk."px";?> ; height: <?php echo $blk."px";?>; margin: 0px; padding: 0px; border: 0px }    
+    table{width: <?php echo $blk*12 ."px";?> ; height: <?php echo $blk*21 ."px";?> ; margin: 0px; padding:0px; border: 0px; border-collapse:collapse }    
 </style>
 </HEAD>
 
@@ -30,5 +30,6 @@
         }
         ?>
     </table>
+    <div name="log"> log: </div>
 </body>
 </html>
