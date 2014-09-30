@@ -4,6 +4,10 @@
     <script type="text/javascript" charset="utf-8" src="./jquery-1.7.2.min.js"></script>
 
     <script type="text/javascript" charset="utf-8" src="./fk.js"></script>
+    <script type="text/javascript" charset="utf-8" src="./shap.js"></script>
+    <script type="text/javascript" charset="utf-8" src="./eventK.js"></script>
+
+
 <style type="text/css">
     tr,td{text-align:center; background-color:#A7C942; width: 30px ; height: 30px; margin: 0px; padding: 0px; border: 0px }    
     table{width: 360px ; height: 630px ; margin: 0px; padding:0px; border: 0px; border-collapse:collapse }    
@@ -18,7 +22,7 @@
         for($i=0; $i<21; $i++){
             echo '<tr class="row'. $i .'">';
             for($j=0; $j<12; $j++){
-                echo '<td class="data'. $i."-".$j .'">';
+                echo '<td class="data'. $i."-".$j .'" lock="0">';
                 echo '.';
                 echo '</td>';
             }
